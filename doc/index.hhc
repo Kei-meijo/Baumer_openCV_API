@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="クラス"><param name="Local" value="annotated.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="クラス一覧"><param name="Local" value="annotated.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="baumer"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="VideoCapture"><param name="Local" value="classbaumer_1_1_video_capture.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="baumer_device"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="close"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#a32bc977b649f97a4f1b7f2addf560972"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getDisplayName"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#af49950dfd000a293614732bb463fe7ef"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getExposureTime"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#a667b2a7a21ca67bdce6937b16a024042"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getExposureTimeMax"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#a120c89117cc35a60a6a3e901b9c2c5de"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getExposureTimeMin"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#a1521d938b7c11e9a8dadb71ac318dcd6"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getGainMax"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#afbb58e156d3a80f2380c23c18a38ef3f"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getGainMin"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#ad19858df9d68356b2ce7b52c8e042d7c"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getGainVal"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#ad562f0252ba08dac4eb6ee84138c1aa1"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getModel"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#a4aedd3171e25b39b6b6420bd4995e402"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getRemoteNode"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#ae5b7b50582b929e128872b2a41621b54"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getRemoteNodeList"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#ab86f40c8b3b6a23b6b4abe8bb049ab16"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getSerialNumber"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#aa191e5ce8ebb705e849f02a80d08fdfd"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getSize"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#acdc63a78c67d46908de184a07732fee4"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="read"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#a11c7fb3dbdc5ae83efd89d6a902a38a4"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="relese"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#a1ff293a67016723daf5d80ffa6c6397c"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="set"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#a67f1b1d922dc6260b5712ed90b4bf030"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="setExposureTime"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#ac4f820bb25dbce2a1b4a91e2b88df8c7"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="setGain"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#a510e65fa78e4b529596f8a29a39f2d23"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="setHeight"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#a07d8ac2c0f83f76ebf9d459c8b118953"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="setSize"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#a240e35c702d539d15304c233e4355135"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="setWidth"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#a4a8ab2cb1665f04d550db9e35c0947f7"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="startCamera"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#acf8cd0d87f43434325d0f5930a4a5960"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="stopCamera"><param name="Local" value="structbaumer_1_1_video_capture_1_1baumer__device.html#af87d3365a2035d234110ab04c17a3a4a"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="VideoCapture"><param name="Local" value="classbaumer_1_1_video_capture.html#a69a1a4ba1fbf50d88c346c47cc92aa72"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="~VideoCapture"><param name="Local" value="classbaumer_1_1_video_capture.html#a1385f62a4f44ee7efc7fec8542cbe323"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="operator[]"><param name="Local" value="classbaumer_1_1_video_capture.html#a5e020e38611ae1f2dff3d0e171e3c620"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="operator[]"><param name="Local" value="classbaumer_1_1_video_capture.html#a0852160064bfd85dfeeefd058e512565"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="size"><param name="Local" value="classbaumer_1_1_video_capture.html#a3af5dea9d80fbfeafd50c06f17161463"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="start"><param name="Local" value="classbaumer_1_1_video_capture.html#ae789f725c343039a433bcb053727d45c"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="stop"><param name="Local" value="classbaumer_1_1_video_capture.html#a87e3cf15b7e22164647d5c052f0326c3"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="cameras"><param name="Local" value="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="クラス索引"><param name="Local" value="classes.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="クラスメンバ"><param name="Local" value="functions.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="全て"><param name="Local" value="functions.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="関数"><param name="Local" value="functions_func.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="変数"><param name="Local" value="functions_vars.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="ファイル"><param name="Local" value="files.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ファイル一覧"><param name="Local" value="files.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Visual Studio 2017"><param name="Local" value="dir_36ef7ccc479de20cf0535dd449d532fb.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Projects"><param name="Local" value="dir_78844767cebaada634599448bd2e99d8.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Baumer"><param name="Local" value="dir_aa77833c01a7af892643c89ab2beacec.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Baumer"><param name="Local" value="dir_c00a5105d49360bc06a5b9bafe6501fd.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Baumer.cpp"><param name="Local" value="_baumer_8cpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Baumer.h"><param name="Local" value="_baumer_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="main.cpp"><param name="Local" value="main_8cpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          </UL>
+        </UL>
+      </UL>
+    </UL>
+  </UL>
+</UL>
+</BODY>
+</HTML>

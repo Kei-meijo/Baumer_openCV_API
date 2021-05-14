@@ -1,0 +1,45 @@
+[OPTIONS]
+Compiled file=baumer.chm
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x411 Japanese
+Title=Baumer
+
+[WINDOWS]
+main="Baumer","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+_baumer_8cpp_source.html
+_baumer_8h_source.html
+annotated.html
+classbaumer_1_1_video_capture-members.html
+classbaumer_1_1_video_capture.html
+classes.html
+dir_36ef7ccc479de20cf0535dd449d532fb.html
+dir_78844767cebaada634599448bd2e99d8.html
+dir_aa77833c01a7af892643c89ab2beacec.html
+dir_c00a5105d49360bc06a5b9bafe6501fd.html
+files.html
+functions.html
+functions_func.html
+functions_vars.html
+index.html
+main_8cpp_source.html
+structbaumer_1_1_video_capture_1_1baumer__device-members.html
+structbaumer_1_1_video_capture_1_1baumer__device.html
+bc_s.png
+bdwn.png
+closed.png
+nav_f.png
+nav_h.png
+open.png
+sync_off.png
+sync_on.png
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png
