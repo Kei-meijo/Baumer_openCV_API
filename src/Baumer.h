@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include <utility>
+#include <exception>
 #include <opencv2/opencv.hpp>
 #include "bgapi2_genicam/bgapi2_genicam.hpp"
 
@@ -308,8 +308,7 @@ namespace baumer {
 								mat = *imTransformBGR8;
 
 
-							} else if ((pBufferFilled->GetPixelFormat() == "Mono8") || (pBufferFilled->GetPixelFormat() == "BayerRG8") || (pBufferFilled->GetPixelFormat() == "BayerGB8")) //openCV format (CV_8UC1)
-							{
+							} else if ((pBufferFilled->GetPixelFormat() == "Mono8") || (pBufferFilled->GetPixelFormat() == "BayerRG8") || (pBufferFilled->GetPixelFormat() == "BayerGB8")) {//openCV format (CV_8UC1)
 								cv::Mat* tmp = new cv::Mat((int)pBufferFilled->GetHeight(), (int)pBufferFilled->GetWidth(), CV_8UC1, (char *)((bo_uint64)(pBufferFilled->GetMemPtr()) + pBufferFilled->GetImageOffset()));
 								mat = *tmp;
 							} else if (pBufferFilled->GetPixelFormat() == "Mono16") {
@@ -343,6 +342,7 @@ namespace baumer {
 							pBufferFilled->QueueBuffer();
 						}
 					} catch (BGAPI2::Exceptions::IException& ex) { return false; }
+					catch (std::exception& e) { return false; }
 
 					if (mat.empty())return false;
 					pBufferFilled = NULL;
@@ -711,16 +711,19 @@ namespace baumer {
 		~VideoCapture();
 		/**
 		* カメラ画像取得開始
+		* @return bool 正常にカメラが開始できたか
 		*/
 		bool start();
 
 		/**
 		* カメラ画像取得終了
+		* @return bool 正常にカメラが終了できたか
 		*/
 		bool stop();
 
 		/**
 		* カメラ数取得
+		* @return int 接続されたカメラの数
 		*/
 		inline int size() {
 			return cameras.size();
@@ -738,6 +741,14 @@ namespace baumer {
 			if (n >= cameras.size())return cameras[cameras.size() - 1];
 
 			return cameras[n];
+		}
+
+		/**
+		* カメラが接続されたか
+		* @return bool カメラが接続されたか
+		*/
+		inline bool isOpened() {
+			return this->cameras.size() > 0;
 		}
 
 	private:

@@ -4,7 +4,6 @@
 namespace baumer {
 	VideoCapture::VideoCapture() {
 		openSystem();
-		
 	}
 
 	VideoCapture::~VideoCapture() {
@@ -38,7 +37,7 @@ namespace baumer {
 	}
 
 	bool VideoCapture::start() {
-		bool canStartCam = true;
+		bool canStartCam = this->cameras.size() > 0;
 		for (auto cam : this->cameras) {
 			canStartCam &= cam.startCamera();
 		}

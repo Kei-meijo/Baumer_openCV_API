@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Baumer: C:/Users/rsdlab/Documents/Visual Studio 2017/Projects/Baumer/Baumer/Baumer.h ソースファイル</title>
+<title>Baumer_API: C:/Git/Baumer_API/src/Baumer.h ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,8 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Baumer
-   &#160;<span id="projectnumber">1.0.0</span>
+   <div id="projectname">Baumer_API
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Baumer Camera to OpenCV</div>
   </td>
@@ -51,23 +47,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('_baumer_8h_source.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -82,6 +61,11 @@ $(document).ready(function(){initNavTree('_baumer_8h_source.html',''); initResiz
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_501bdb11da9e3ff85a05ee91b220e720.html">Git</a></li><li class="navelem"><a class="el" href="dir_0584cb87e466217a3ae9b7ae3f63e3e1.html">Baumer_API</a></li><li class="navelem"><a class="el" href="dir_a215980f6c290e651e2edd9b8f67973e.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Baumer.h</div>  </div>
@@ -89,7 +73,7 @@ $(document).ready(function(){initNavTree('_baumer_8h_source.html',''); initResiz
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;bgapi2_genicam/bgapi2_genicam.hpp&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
@@ -317,41 +301,41 @@ $(document).ready(function(){initNavTree('_baumer_8h_source.html',''); initResiz
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                                mat = *imTransformBGR8;</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;Mono8&quot;</span>) || (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BayerRG8&quot;</span>) || (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BayerGB8&quot;</span>)) <span class="comment">//openCV format (CV_8UC1)</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                            {</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                                cv::Mat* tmp = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_8UC1, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                                mat = *tmp;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;Mono16&quot;</span>) {</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                                cv::Mat* imOriginal = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC1, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                                mat = *imOriginal;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;Mono12&quot;</span>) || (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BayerRG12&quot;</span>) || (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BayerGB12&quot;</span>)) {</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                                cv::Mat* imOriginal = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC1, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                                *imOriginal *= 16; <span class="comment">//shift 4 bits</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                                mat = *imOriginal;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;Mono10&quot;</span>) || (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BayerRG10&quot;</span>) || (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BayerGB10&quot;</span>)) { <span class="comment">//openCV format (CV_16UC1)</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                                cv::Mat* imOriginal = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC1, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                                *imOriginal *= 64; <span class="comment">//shift 6 bits</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                                mat = *imOriginal;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BGR16&quot;</span>) {</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                                cv::Mat* imOriginal = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC3, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                                cv::Mat* imConvert = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC3); <span class="comment">//memory allocation</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                                imOriginal-&gt;convertTo(*imConvert, CV_16UC3, 1.0); <span class="comment">//full copy with previous memory allocation AND scaling of 1.0</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                                mat = *imConvert;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BGR12&quot;</span>) {</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                                cv::Mat* imOriginal = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC3, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                                cv::Mat* imConvert = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC3); <span class="comment">//memory allocation</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                                imOriginal-&gt;convertTo(*imConvert, CV_16UC3, 16.0); <span class="comment">//full copy with previous memory allocation AND scaling of 16.0 to convert 12-Bit to 16-Bit </span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                                mat = *imConvert;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BGR10&quot;</span>) {</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                                cv::Mat* imOriginal = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC3, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                                cv::Mat* imConvert = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC3); <span class="comment">//memory allocation</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                                imOriginal-&gt;convertTo(*imConvert, CV_16UC3, 64.0); <span class="comment">//full copy with previous memory allocation AND scaling of 64.0 to convert 10-Bit to 16-Bit </span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                                mat = *imConvert;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                            }</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                            <span class="comment">// queue buffer again</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                            pBufferFilled-&gt;QueueBuffer();</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                        }</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                    } <span class="keywordflow">catch</span> (BGAPI2::Exceptions::IException&amp; ex) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;Mono8&quot;</span>) || (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BayerRG8&quot;</span>) || (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BayerGB8&quot;</span>)) {<span class="comment">//openCV format (CV_8UC1)</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                                cv::Mat* tmp = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_8UC1, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                                mat = *tmp;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;Mono16&quot;</span>) {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                                cv::Mat* imOriginal = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC1, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                                mat = *imOriginal;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;Mono12&quot;</span>) || (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BayerRG12&quot;</span>) || (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BayerGB12&quot;</span>)) {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                                cv::Mat* imOriginal = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC1, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                                *imOriginal *= 16; <span class="comment">//shift 4 bits</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                                mat = *imOriginal;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;Mono10&quot;</span>) || (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BayerRG10&quot;</span>) || (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BayerGB10&quot;</span>)) { <span class="comment">//openCV format (CV_16UC1)</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                                cv::Mat* imOriginal = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC1, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                                *imOriginal *= 64; <span class="comment">//shift 6 bits</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                                mat = *imOriginal;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BGR16&quot;</span>) {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                                cv::Mat* imOriginal = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC3, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                                cv::Mat* imConvert = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC3); <span class="comment">//memory allocation</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                                imOriginal-&gt;convertTo(*imConvert, CV_16UC3, 1.0); <span class="comment">//full copy with previous memory allocation AND scaling of 1.0</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                                mat = *imConvert;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BGR12&quot;</span>) {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                                cv::Mat* imOriginal = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC3, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                                cv::Mat* imConvert = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC3); <span class="comment">//memory allocation</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                                imOriginal-&gt;convertTo(*imConvert, CV_16UC3, 16.0); <span class="comment">//full copy with previous memory allocation AND scaling of 16.0 to convert 12-Bit to 16-Bit </span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                                mat = *imConvert;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pBufferFilled-&gt;GetPixelFormat() == <span class="stringliteral">&quot;BGR10&quot;</span>) {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                                cv::Mat* imOriginal = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC3, (<span class="keywordtype">char</span> *)((bo_uint64)(pBufferFilled-&gt;GetMemPtr()) + pBufferFilled-&gt;GetImageOffset()));</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                                cv::Mat* imConvert = <span class="keyword">new</span> cv::Mat((<span class="keywordtype">int</span>)pBufferFilled-&gt;GetHeight(), (<span class="keywordtype">int</span>)pBufferFilled-&gt;GetWidth(), CV_16UC3); <span class="comment">//memory allocation</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                                imOriginal-&gt;convertTo(*imConvert, CV_16UC3, 64.0); <span class="comment">//full copy with previous memory allocation AND scaling of 64.0 to convert 10-Bit to 16-Bit </span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                                mat = *imConvert;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                            }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                            <span class="comment">// queue buffer again</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                            pBufferFilled-&gt;QueueBuffer();</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                        }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                    } <span class="keywordflow">catch</span> (BGAPI2::Exceptions::IException&amp; ex) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                    <span class="keywordflow">catch</span> (std::exception&amp; e) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                    <span class="keywordflow">if</span> (mat.empty())<span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                    pBufferFilled = NULL;</div>
@@ -610,38 +594,43 @@ $(document).ready(function(){initNavTree('_baumer_8h_source.html',''); initResiz
 <div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;        <a class="code" href="classbaumer_1_1_video_capture.html">VideoCapture</a>();</div>
 <div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        ~<a class="code" href="classbaumer_1_1_video_capture.html">VideoCapture</a>();</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classbaumer_1_1_video_capture.html#ae789f725c343039a433bcb053727d45c">start</a>();</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160; </div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classbaumer_1_1_video_capture.html#a87e3cf15b7e22164647d5c052f0326c3">stop</a>();</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160; </div>
-<div class="line"><a name="l00725"></a><span class="lineno"><a class="line" href="classbaumer_1_1_video_capture.html#a3af5dea9d80fbfeafd50c06f17161463">  725</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3af5dea9d80fbfeafd50c06f17161463">size</a>() {</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>.size();</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        }</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160; </div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;        baumer_device &amp;operator[](<span class="keywordtype">int</span> n) {</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;            <span class="keywordflow">if</span> (n &lt; 0)<span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>[0];</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;            <span class="keywordflow">if</span> (n &gt;= <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>.size())<span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>[<a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>.size() - 1];</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160; </div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>[n];</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        }</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classbaumer_1_1_video_capture.html#ae789f725c343039a433bcb053727d45c">start</a>();</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160; </div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classbaumer_1_1_video_capture.html#a87e3cf15b7e22164647d5c052f0326c3">stop</a>();</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160; </div>
+<div class="line"><a name="l00728"></a><span class="lineno"><a class="line" href="classbaumer_1_1_video_capture.html#a3af5dea9d80fbfeafd50c06f17161463">  728</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3af5dea9d80fbfeafd50c06f17161463">size</a>() {</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>.size();</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        }</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160; </div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        baumer_device &amp;operator[](<span class="keywordtype">int</span> n) {</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;            <span class="keywordflow">if</span> (n &lt; 0)<span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>[0];</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;            <span class="keywordflow">if</span> (n &gt;= <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>.size())<span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>[<a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>.size() - 1];</div>
 <div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160; </div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        baumer_device <span class="keyword">const</span> &amp;operator[](<span class="keywordtype">int</span> n)<span class="keyword"> const</span>{</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;            <span class="keywordflow">if</span> (n &lt; 0)<span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>[0];</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;            <span class="keywordflow">if</span> (n &gt;= <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>.size())<span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>[<a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>.size() - 1];</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160; </div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>[n];</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        }</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>[n];</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;        }</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160; </div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        baumer_device <span class="keyword">const</span> &amp;operator[](<span class="keywordtype">int</span> n)<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;            <span class="keywordflow">if</span> (n &lt; 0)<span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>[0];</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;            <span class="keywordflow">if</span> (n &gt;= <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>.size())<span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>[<a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>.size() - 1];</div>
 <div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160; </div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        </div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;        <span class="keywordtype">bool</span> openSystem();</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    };</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;}</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">cameras</a>[n];</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        }</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160; </div>
+<div class="line"><a name="l00750"></a><span class="lineno"><a class="line" href="classbaumer_1_1_video_capture.html#a488c8a15b6604cf6e18a4e115eba8062">  750</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classbaumer_1_1_video_capture.html#a488c8a15b6604cf6e18a4e115eba8062">isOpened</a>() {</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;            <span class="keywordflow">return</span> this-&gt;cameras.size() &gt; 0;</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        }</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160; </div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;        </div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;        <span class="keywordtype">bool</span> openSystem();</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;    };</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;}</div>
 <div class="ttc" id="aclassbaumer_1_1_video_capture_html"><div class="ttname"><a href="classbaumer_1_1_video_capture.html">baumer::VideoCapture</a></div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8h_source.html#l00008">Baumer.h:8</a></div></div>
 <div class="ttc" id="aclassbaumer_1_1_video_capture_html_a3183272e8a379bb2315994dc02365fb0"><div class="ttname"><a href="classbaumer_1_1_video_capture.html#a3183272e8a379bb2315994dc02365fb0">baumer::VideoCapture::cameras</a></div><div class="ttdeci">std::vector&lt; baumer_device &gt; cameras</div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8h_source.html#l00708">Baumer.h:708</a></div></div>
-<div class="ttc" id="aclassbaumer_1_1_video_capture_html_a3af5dea9d80fbfeafd50c06f17161463"><div class="ttname"><a href="classbaumer_1_1_video_capture.html#a3af5dea9d80fbfeafd50c06f17161463">baumer::VideoCapture::size</a></div><div class="ttdeci">int size()</div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8h_source.html#l00725">Baumer.h:725</a></div></div>
-<div class="ttc" id="aclassbaumer_1_1_video_capture_html_a87e3cf15b7e22164647d5c052f0326c3"><div class="ttname"><a href="classbaumer_1_1_video_capture.html#a87e3cf15b7e22164647d5c052f0326c3">baumer::VideoCapture::stop</a></div><div class="ttdeci">bool stop()</div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8cpp_source.html#l00049">Baumer.cpp:49</a></div></div>
-<div class="ttc" id="aclassbaumer_1_1_video_capture_html_ae789f725c343039a433bcb053727d45c"><div class="ttname"><a href="classbaumer_1_1_video_capture.html#ae789f725c343039a433bcb053727d45c">baumer::VideoCapture::start</a></div><div class="ttdeci">bool start()</div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8cpp_source.html#l00040">Baumer.cpp:40</a></div></div>
+<div class="ttc" id="aclassbaumer_1_1_video_capture_html_a3af5dea9d80fbfeafd50c06f17161463"><div class="ttname"><a href="classbaumer_1_1_video_capture.html#a3af5dea9d80fbfeafd50c06f17161463">baumer::VideoCapture::size</a></div><div class="ttdeci">int size()</div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8h_source.html#l00728">Baumer.h:728</a></div></div>
+<div class="ttc" id="aclassbaumer_1_1_video_capture_html_a488c8a15b6604cf6e18a4e115eba8062"><div class="ttname"><a href="classbaumer_1_1_video_capture.html#a488c8a15b6604cf6e18a4e115eba8062">baumer::VideoCapture::isOpened</a></div><div class="ttdeci">bool isOpened()</div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8h_source.html#l00750">Baumer.h:750</a></div></div>
+<div class="ttc" id="aclassbaumer_1_1_video_capture_html_a87e3cf15b7e22164647d5c052f0326c3"><div class="ttname"><a href="classbaumer_1_1_video_capture.html#a87e3cf15b7e22164647d5c052f0326c3">baumer::VideoCapture::stop</a></div><div class="ttdeci">bool stop()</div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8cpp_source.html#l00048">Baumer.cpp:48</a></div></div>
+<div class="ttc" id="aclassbaumer_1_1_video_capture_html_ae789f725c343039a433bcb053727d45c"><div class="ttname"><a href="classbaumer_1_1_video_capture.html#ae789f725c343039a433bcb053727d45c">baumer::VideoCapture::start</a></div><div class="ttdeci">bool start()</div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8cpp_source.html#l00039">Baumer.cpp:39</a></div></div>
 <div class="ttc" id="astructbaumer_1_1_video_capture_1_1baumer__device_html"><div class="ttname"><a href="structbaumer_1_1_video_capture_1_1baumer__device.html">baumer::VideoCapture::baumer_device</a></div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8h_source.html#l00177">Baumer.h:177</a></div></div>
 <div class="ttc" id="astructbaumer_1_1_video_capture_1_1baumer__device_html_a07d8ac2c0f83f76ebf9d459c8b118953"><div class="ttname"><a href="structbaumer_1_1_video_capture_1_1baumer__device.html#a07d8ac2c0f83f76ebf9d459c8b118953">baumer::VideoCapture::baumer_device::setHeight</a></div><div class="ttdeci">bool setHeight(int height)</div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8h_source.html#l00648">Baumer.h:648</a></div></div>
 <div class="ttc" id="astructbaumer_1_1_video_capture_1_1baumer__device_html_a11c7fb3dbdc5ae83efd89d6a902a38a4"><div class="ttname"><a href="structbaumer_1_1_video_capture_1_1baumer__device.html#a11c7fb3dbdc5ae83efd89d6a902a38a4">baumer::VideoCapture::baumer_device::read</a></div><div class="ttdeci">bool read(cv::Mat &amp;mat)</div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8h_source.html#l00519">Baumer.h:519</a></div></div>
@@ -667,13 +656,9 @@ $(document).ready(function(){initNavTree('_baumer_8h_source.html',''); initResiz
 <div class="ttc" id="astructbaumer_1_1_video_capture_1_1baumer__device_html_af87d3365a2035d234110ab04c17a3a4a"><div class="ttname"><a href="structbaumer_1_1_video_capture_1_1baumer__device.html#af87d3365a2035d234110ab04c17a3a4a">baumer::VideoCapture::baumer_device::stopCamera</a></div><div class="ttdeci">bool stopCamera()</div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8h_source.html#l00474">Baumer.h:474</a></div></div>
 <div class="ttc" id="astructbaumer_1_1_video_capture_1_1baumer__device_html_afbb58e156d3a80f2380c23c18a38ef3f"><div class="ttname"><a href="structbaumer_1_1_video_capture_1_1baumer__device.html#afbb58e156d3a80f2380c23c18a38ef3f">baumer::VideoCapture::baumer_device::getGainMax</a></div><div class="ttdeci">double getGainMax()</div><div class="ttdef"><b>Definition:</b> <a href="_baumer_8h_source.html#l00574">Baumer.h:574</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_36ef7ccc479de20cf0535dd449d532fb.html">Visual Studio 2017</a></li><li class="navelem"><a class="el" href="dir_78844767cebaada634599448bd2e99d8.html">Projects</a></li><li class="navelem"><a class="el" href="dir_aa77833c01a7af892643c89ab2beacec.html">Baumer</a></li><li class="navelem"><a class="el" href="dir_c00a5105d49360bc06a5b9bafe6501fd.html">Baumer</a></li><li class="navelem"><b>Baumer.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
 </body>
 </html>

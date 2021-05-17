@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['read_44',['read',['../structbaumer_1_1_video_capture_1_1baumer__device.html#a11c7fb3dbdc5ae83efd89d6a902a38a4',1,'baumer::VideoCapture::baumer_device']]],
-  ['relese_45',['relese',['../structbaumer_1_1_video_capture_1_1baumer__device.html#a1ff293a67016723daf5d80ffa6c6397c',1,'baumer::VideoCapture::baumer_device']]]
+  ['isopened_45',['isOpened',['../classbaumer_1_1_video_capture.html#a488c8a15b6604cf6e18a4e115eba8062',1,'baumer::VideoCapture']]]
 ];
