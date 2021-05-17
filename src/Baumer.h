@@ -1,4 +1,11 @@
+#ifndef RSDLAB_BAUMER_OPENCV_API
+#define RSDLAB_BAUMER_OPENCV_API
+
+
+#if _MSC_VER > 1000
 #pragma once
+#endif
+
 #include <vector>
 #include <exception>
 #include <opencv2/opencv.hpp>
@@ -756,3 +763,5 @@ namespace baumer {
 		bool openSystem();
 	};
 }
+
+#endif

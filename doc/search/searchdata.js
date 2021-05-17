@@ -16,9 +16,9 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "全て",
-  1: "クラス",
-  2: "関数",
-  3: "変数"
+  0: "All",
+  1: "Classes",
+  2: "Functions",
+  3: "Variables"
 };
 
